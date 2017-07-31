@@ -17,7 +17,7 @@ verifier:
   name: inspec
 
 transport:
-  ssh_key: /root/.ssh/chef_ubuntu.pem
+  ssh_key: ~/.ssh/chef_ubuntu.pem
 
 platforms:
   - name: ubuntu-16.04
