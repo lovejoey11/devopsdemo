@@ -1,7 +1,7 @@
 ---
 driver:
   name: ec2
-  aws_ssh_key_id: chef_ubuntu.pem
+  aws_ssh_key_id: chef_ubuntu
   region: us-west-2
   availability_zone: c
   subnet_id: subnet-e492cfbc
