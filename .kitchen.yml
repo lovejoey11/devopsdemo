@@ -25,7 +25,8 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[webserver]
+      - recipe["webserver"]
+
     verifier:
       inspec_tests:
         - test/smoke/default_test
