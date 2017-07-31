@@ -21,6 +21,7 @@ cookbook_file "/var/www/html/index.html" do
   mode "0644"
 end
 
+ip = ''
 
 # create output dir
 directory node['selfsigned_certificate']['destination'] do
@@ -55,13 +56,19 @@ cookbook_file "#{node['selfsigned_certificate']['destination']}.server.key" do
   mode 644
 end
 
-cookbook_file "/etc/apache2/sites-available/default-ssl.conf" do 
-  source "sites-available/default-ssl.conf"
+template "/etc/apache2/sites-available/default-ssl.conf" do 
+  source "sites-available/default-ssl.conf.erb"
+  variables(
+    'pub-ipaddress' -> ip
+    )
   mode "0644"
 end
 
-cookbook_file "/etc/apache2/sites-available/000-default.conf" do
-  source "sites-available/000-default.conf"
+template "/etc/apache2/sites-available/000-default.conf" do
+  source "sites-available/000-default.conf.erb"
+  variables(
+    'pub-ipaddress' -> ip
+    )
   mode "0644"
 
 # create the certificate: make a request for signature for a certiciate, and have your own CA sign it.
