@@ -21,6 +21,10 @@ describe port(80) do
   it { should be_listening }
 end
 
-describe command('systemctl httpd status') do
+describe command('systemctl status apache2') do
   its('exit_status') { should eq 0 }
+end
+
+describe command('curl localhost') do
+  its('stdout') { should match /[Hh]ello/ }
 end

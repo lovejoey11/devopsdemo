@@ -29,5 +29,5 @@ suites:
 
     verifier:
       inspec_tests:
-        - test/smoke/default_test
+        - test/smoke/default/default_test.rb
     attributes:
