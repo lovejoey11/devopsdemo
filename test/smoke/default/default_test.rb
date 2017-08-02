@@ -12,12 +12,12 @@ unless os.windows?
   end
 end
 
-describe package('httpd') do
+describe package('apache2') do
   it { should be_installed }
 end
 
 # This is an example test, replace it with your own test.
-describe port(443), :skip do
+describe port(80) do
   it { should be_listening }
 end
 
