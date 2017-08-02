@@ -24,3 +24,4 @@ Policyfile.lock.json
 
 # Credentials
 credentials.csv
+.DS_Store
