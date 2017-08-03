@@ -25,9 +25,9 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[webserver]
-
+      - recipe[alb::default]
+     # - recipe[alb::apache]
     verifier:
       inspec_tests:
-        - test/smoke/default/default_test.rb
+        - test/smoke/default
     attributes:

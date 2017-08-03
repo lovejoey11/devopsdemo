@@ -11,8 +11,6 @@ Gemfile.lock
 bin/*
 .bundle/*
 
-.delivery/
-
 # test kitchen
 .kitchen/
 .kitchen.local.yml
@@ -21,7 +19,3 @@ bin/*
 Berksfile.lock
 .zero-knife.rb
 Policyfile.lock.json
-
-# Credentials
-credentials.csv
-.DS_Store

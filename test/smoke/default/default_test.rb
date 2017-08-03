@@ -17,6 +17,10 @@ describe package('apache2') do
 end
 
 # This is an example test, replace it with your own test.
+describe port(443) do
+  it { should be_listening }
+end
+
 describe port(80) do
   it { should be_listening }
 end
@@ -25,6 +29,10 @@ describe command('systemctl status apache2') do
   its('exit_status') { should eq 0 }
 end
 
-describe command('curl localhost') do
-  its('stdout') { should match /[Hh]ello/ }
+describe file('/usr/var/ssl/certs/server.crt') do
+    it { should exist }
+  end
+describe file('/usr/var/ssl/certs/server.key') do
+    it { should exist }
 end
+

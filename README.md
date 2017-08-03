@@ -1,6 +1,4 @@
-# Scalable Web Server
+# webserver
 
-- Main Automation Tool
-	- Chef
-
+TODO: Enter the cookbook description here.
 
