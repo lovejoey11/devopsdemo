@@ -26,7 +26,6 @@ suites:
   - name: default
     run_list:
       - recipe[webserver-ss::default]
-     # - recipe[alb::apache]
     verifier:
       inspec_tests:
         - test/smoke/default
