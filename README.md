@@ -1,9 +1,15 @@
 # webserver
 ---
-### Instructions 
-This is a test dirven cookbook project 
+- This is a test dirven cookbook project
 `kitchen verify` will automate and test your server configuration
-- Usage 
+- I have created two instances , one instance is chef-server , the other is a workstation.
+- when we spin up the recipe it updates apt cache,enables apache and generate index.html.
+- used openssl tool to generate self seigned certificate for our server.
+-  configure SSL seetings in apache , where it enable ssl function and configures http redirection.
+- Briefly we  create a chef kitchen environment , where we test and automate the recipe , once everything runs good ,destroy the kitchen.
+### Instructions
+
+- Usage
   - Before creating test kitchen, modify your .kitchen.yml configration. refer to the example below.
   - **Do not use `kitchen create` to create test kitchen**
   - Just use shell script **kitchen-create.sh** to create test kitchen
