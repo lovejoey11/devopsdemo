@@ -42,4 +42,4 @@ suites:
         - test/smoke/default
     attributes:
 ```
-### this is test purpose :rocket: :gostface: :boom:
+### this is test purpose :rocket: :beer: :boom:
