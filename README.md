@@ -1,15 +1,15 @@
 # webserver
 ---
-### Instrcution 
+### Instructions 
 This is a test dirven cookbook project 
-`kitchen verify` will automatic test the configuration of your server configuration
+`kitchen verify` will automate and test your server configuration
 - Usage 
-  - When creating test kitchen, modify your .kitchen.yml configration
+  - Before creating test kitchen, modify your .kitchen.yml configration. refer to the example below.
   - **Do not use `kitchen create` to create test kitchen**
-  - Use the shell script **kitchen-create.sh** to create test kitchen
-  - execute `kitchen verify` to see the test result, and you go to the public DNS of your instance.
+  - Just use shell script **kitchen-create.sh** to create test kitchen
+  - execute `kitchen verify` to see the test result, and you can go to the public DNS of your instance.
 ---
-```
+```.kitchen.yml example
 driver:
   name: ec2
   aws_ssh_key_id: <Your Aws ssh key pair name>
