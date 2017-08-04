@@ -25,7 +25,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[alb::default]
+      - recipe[webserver-ss::default]
      # - recipe[alb::apache]
     verifier:
       inspec_tests:

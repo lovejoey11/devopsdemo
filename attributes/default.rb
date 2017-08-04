@@ -8,4 +8,4 @@ default['selfsigned_certificate']['depart'] = "demo"
 default['selfsigned_certificate']['email'] = "Devops@demo.com"
 default['ssl_cert']['source'] = '/usr/var/ssl/certs/server.crt'
 default['ssl_key']['source'] = '/usr/var/ssl/certs/server.key'
-default['ssl_host']['ip'] = ' 34.210.128.243'
+default['ssl_host']['ip']='34.211.218.201'

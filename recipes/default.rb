@@ -49,7 +49,7 @@ include_recipe 'apache2'
 include_recipe 'apache2::mod_ssl'
 web_app 'default-ssl' do
   cookbook 'ssl_certificate'
-  server_name '52.11.112.67' 
+  server_name node['ssl_host']['ip'] 
   docroot '/var/www/html'
   ssl_key node['ssl_key']['source']
   ssl_cert node['ssl_cert']['source']
